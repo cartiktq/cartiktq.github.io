@@ -23,9 +23,27 @@
 </head>
 <body>
   <h1>My Most Recent Projects</h1>
+  <div class="scRNA">
+    <h2><a href="https://github.com/cartiktq/ML4SingleCellRNA">Single-Cell RNA Analysis</a></h2>
+    <div>This codebase is an approximation of a consulting project I did for a biotech startup. The actual codebase is copyright protected. The Python classes
+    handle specific steps including;
+      <ul>
+      <li>extracting single-cell RNA datasets from an open access repository such as GEO,</li>
+      <li>performing preprocessing and QC on the extracted data,</li>
+      <li>and the use of classical Machine Learning algorithms (implemented in scikit-learn) for biomarker identification, patient stratification, and identification of
+    pathways which describe the specialization of various cell types from a single progenitor, and</li>
+      <li>visualization of genetic biomarkers, cell development trajectories, and patient strata using the Seaborn package</li>. 
+    </ul>
+    Each of these classes can be containerized into Docker (some of the container code is here) and invoked sequentially using an orchestrator such as Kubernetes or 
+    a workflow implemented with Flyte. Actually, my work for the startup involved developing the Flyte workflow to execute this sequence of actions and deploying it on 
+    an AWS Fargate cluster  
+    </div>
+  </div>
+  
   <div class="Generative AI">
     <h2><a href="https://github.com/cartiktq/GenAI">Generative AI</a></h2>
-    <ul>Work with LLMs, LangChain, LangGraph, Transformers, etc. for:
+    <p>Work with LLMs, LangChain, LangGraph, Transformers, etc. for:</p>
+    <ul>
       <li>Text summarization</li>
       <li>Text generation</li>
       <li>Prompt Engineering</li>
