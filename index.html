@@ -23,6 +23,30 @@
 </head>
 <body>
   <h1>My Most Recent Projects</h1>
+  <div class="Agentic AI for Wearables Data Analysis">
+    <h2><a href="https://github.com/cartiktq/WearablesDataAnalysis">Single-Cell RNA Analysis</a></h2>
+    <div>This codebase is a machine learning development and deployment workflow, which uses Agentic AI libraries in a microservices design, where the containerized modules
+      are orchestrated by Kubernetes. This is an approximation of the work I did in one of my recent roles (private access codebase cannot be shared). 
+      At a high level, the ML development worklow 
+      <ul>
+      <li>Collects subject physiological data such as heart rate, oxygen saturation, etc.from wearable sensors such as smart watches</li>
+      <li>Performs feature engineering on the wearables data using techniques such as moving window averages and trend analysis,</li>
+      <li>integrates this processed wearables data with static subject demographics and clinical history data, both sourced from different data sources,</li>
+      <li>integrates with live weather data feeds which have values for temperature, air quality index, humidity, wind chill, heat index, etc.,</li>
+      <li>uses a BERT encoder to generate a hyperdimensional embedding and,</li>
+      <li>uses a deep learning model to predict the possible onset of adverse events such as dehydration, heat stroke, or fatigue</li> 
+    </ul>
+      This is a bootstrapped system that works with unlabelled data (unsupervised learning). To achieve optimal performance, the training workflow is supervised by an AI 
+      agent, which sources outcomes data for the monitored subjects over time, generates the metrics such as recall and F-score from the outcomes, and uses this metric to
+      set off successive training epochs until the Deep Learning NN performs at recall levels exceeding 0.9 or 0.95.
+
+      The deployment workflow sets up an A/B deployment with a champion and a challenger ML model performing online inferences on a 70-30 split of live streaming wearables data. 
+
+      This is an extremely simplistic scenario. It can be extended so that multiple deep learning models can be trained in parallel with a supervisory agent performing 
+      hyperparameter tuning to find the best performing models. The selection of a model for deployment will be done by an agent, which oversees the A/B model deployment.   
+    </div>
+  </div>
+  
   <div class="scRNA">
     <h2><a href="https://github.com/cartiktq/ML4SingleCellRNA">Single-Cell RNA Analysis</a></h2>
     <div>This codebase is an approximation of a consulting project I did for a biotech startup. The actual codebase is copyright protected. The Python classes
