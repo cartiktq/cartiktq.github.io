@@ -23,6 +23,51 @@
 </head>
 <body>
   <h1>My Most Recent Projects</h1>
+  <div class="AI - Clinical Informatics">
+    <h2><a href="https://github.com/cartiktq/PMS-ClinicalInformatics">AI in Clinical Informatics</a></h2>
+    <img align="center" src="PMS-ClinicalInformatics/PMS-ClinicalInformaticsWorkflow.jpg" alt="Workflow for processing and analyzing information from synthezied clinical notes"/>    
+    <div>
+      <p>
+      This is a personal project that is an extension of some of the research work I did at Harvard Medical School. Phelan-McDermid Syndrome (PMS) is a 
+      rare disorder that afflicts children. It is associated with the deletion of the terminal end of the long-arm of the 23rd chromosome and presents
+      a variety of clinical and behavioral symptoms. 
+      </p>
+      <p>
+      Since clinical data is extremely difficult to obtain, requiring extensive paperwork and vetting by Institutional Review Boards and other 
+      organizations, and since misuse or leakage of clinical data carries heavy penalties such as stipulated in regulations such as HIPAA and 
+      GDPR, generative AI can offer a solution to test data pre-processing including anonymization on synthetically generated clinical notes. 
+      Given the scarcity of structured patient data in regular clinical data warehouses, clinical notes can be a significant source of information 
+      for patients diagnosed with PMS. 
+      </p>  
+      <p> In this project, I demonstrate the utility of agentic AI based workflows which:
+        <ul>
+          <li>generate synthetic clinical notes containing fake PHI elements along with all mentions of diagnoses, lab test results, therapeutic 
+          procedures, prescriptions, clinical and behavioral symptoms and comborbidities</li>
+          <li>use an anonymization tool to scrub PHI elements from the clinical notes</li>
+          <li>evaluate the effectiveness of the anonymization pipeline</li>
+          <li>use classical Named Entity Recognition (NER) on the scrubbed clinical notes to identify clinically relevant concepts</li>
+          <li>map the identified concepts to defined concepts with Concept Unique Identifiers (CUIs) from the Unified Medical Language System (UMLS; 
+          this requires getting licensed accss to UMLS from the National Library of Medicine)</li>
+          <li>find mappings from the CUIs to concepts defined in specialized terminologies such as SNOMED CT, ICD-9/10, CPT, RxNORM, LOINC, and OMIM</li>
+          <li>generate lists of RDF like triples in CSV format as a structured representation of the important clinical information associated with each
+          patient</li>
+          <li>create a patient centric knowledge graph representation of each patient in the cohort</li>
+          <li>(possibly) create hyperdimensional embeddings using transformers to store and cluster patients information in a vector database</li>
+          <li>perform some simple clustering to stratify the patient cohort on the basis of commonly reported symptoms. These could be useful as
+          phenotypical biomarkers to aid the potential identification of undiagnosed patients (PMS can be diagnosed only be genetic tests)</li>
+        </ul>
+      </p> 
+      <p>
+        While the generated embedding vectors for each patient can be presented in user interfaces as knowledge graphs, the clusters (patient strata)
+        could be, in future work (in progress) be correlated with genetic variants reported by PMS patients and stored in open access databases such
+        dbGaP and licensed databases such as SFARI.
+      </p>
+      <p>
+        From a deployment perspective, this is a modular architecture that can be easily containerized (as each module is a self-contained Python class 
+        with Gen AI, ML and other Python packages) and invoked as an orchestrated sequence with Kubernetes in a cloud environment such as Amazon EKS. 
+      </p>
+    </div>
+  </div>
   <div class="Agentic AI for Wearables Data Analysis">
     <h2><a href="https://github.com/cartiktq/WearablesDataAnalysis">Agentic AI for Wearables Data Analysis</a></h2>
     <div>This codebase is a machine learning development and deployment workflow, which uses Agentic AI libraries in a microservices design, where the containerized modules
